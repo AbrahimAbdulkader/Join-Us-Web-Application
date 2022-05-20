@@ -19,12 +19,10 @@ app.get("/", function(req, res) { //Handles the get request
 	var q = "SELECT COUNT(*) AS count FROM users"; 
 	connection.query(q, function(error, results) { //Requests a connection to the DB 
 		if (error) throw error;
-		var count = results[0].count;
-			// res.send("We have " + count + " users in our db") ;
-			//Respond with that count
-		
-		res.render("home"); 
+		var count = results[0].count;		
+		res.render("home", {count: count});  
 		//The res.render() function is used to render a view and sends the rendered HTML string to the client. 
+		// count is assigned to the data
 	});	
 });
 
