@@ -42,3 +42,6 @@ and storing the data in the users table.
 
 
 13th Commit - Used EJS to write HTML and dynamically add/show users on our homepage
+
+
+14th Commit - Tested by inserting a user to the DB to check if the homepage is dynamically adding users
