@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true})); //Tell express that we are using body parser
+app.use(express.static(__dirname + "/public")); //Take all the contents and serve them(what we tell the public folder).
 
 mysql = require('mysql') //We require the mysql package first 
 var connection = mysql.createConnection({ //Created the connection to the mysql package
